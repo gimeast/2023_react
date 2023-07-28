@@ -48,32 +48,32 @@ const dummyData = [
     id: 2,
     emotion: 3,
     content: "오늘의 일기 2번",
-    date: 1690515375826,
+    date: 1690212375823,
   },
   {
     id: 3,
     emotion: 5,
     content: "오늘의 일기 3번",
-    date: 1690515375830,
+    date: 1690215375823,
   },
   {
     id: 4,
     emotion: 2,
     content: "오늘의 일기 4번",
-    date: 1690515375835,
+    date: 1690315375823,
   },
   {
     id: 5,
     emotion: 4,
     content: "오늘의 일기 5번",
-    date: 1690515375840,
+    date: 1690415375823,
   },
 ];
 
 function App() {
   const [data, dispatch] = useReducer(reducer, dummyData);
 
-  const dataId = useRef(0);
+  const dataId = useRef(dummyData.length + 1);
   // CREATE
   const onCreate = (date, content, emotion) => {
     dispatch({
